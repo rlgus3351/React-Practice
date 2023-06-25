@@ -30,7 +30,7 @@
             style={{
                 backgroundColor:"tomato",
             }} 
-            onclick={()=> console.log("im clicked")}
+            onClick={() => console.log("im clicked")}
         >
             Click me
         </button>
@@ -46,7 +46,9 @@
     // );
 
     // const container = React.createElement("div",null,[Title, Button]);
-    const container = <div><Title /><Button/></div>
-    ReactDOM.render(container, root);
+    const Container = () =>(
+        <div><Title /><Button/></div>
+    );
+    ReactDOM.render(<Container/>, root);
 </script>
 </html>
