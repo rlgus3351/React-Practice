@@ -6,5 +6,6 @@ const chosenImage = images[Math.floor(Math.random()*images.length)];
 //bgImage.src = `img/${chosenImage}`;
 const body = document.querySelector("body");
 body.style.backgroundImage = `url(img/${chosenImage})`;
+
 document.body.appendChild(bgImage);
 

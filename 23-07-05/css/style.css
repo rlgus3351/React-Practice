@@ -11,7 +11,8 @@ body{
 }
 
 #clock{
-    font-size: 10em;
+    font-size: 4em;
+    text-align: center;
     color:white;
 }
 
@@ -23,4 +24,13 @@ body{
     height: 100%;
     z-index: -1;
     animation: fadeIn 0.5s linear;
+}
+
+#greeting{
+    text-align: center;
+    font-size: 4em;
+}
+
+#todo_list li{
+    text-decoration: none;
 }
