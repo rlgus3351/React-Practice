@@ -17,7 +17,7 @@ const quotes = [
     },
     {
         quote: 'Our greatest weakness lies in giving up. The most certain way to succeed is always to try just one more time.',
-        author: 'Thomas Edisons'
+        author: 'Thomas Edison'
     },
     {
         quote: 'The fastest way to change yourself is to hang out with people who are already the way you want to be',
