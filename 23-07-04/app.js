@@ -27,8 +27,7 @@ function handleWindowOffline(){
 function handleWindowOnline(){
     alert("ALL GOOD");
 }
-title.addEventListener("click", handleTitleClick);
-title.addEventListener("mouseenter",handleMouseEnter);
+title.addEventListener("click", handleTitleClick);title.addEventListener("mouseenter",handleMouseEnter);
 title.addEventListener("mouseleave",handleMouseLeave);
 
 window.addEventListener("resize", handleWindowResize);
