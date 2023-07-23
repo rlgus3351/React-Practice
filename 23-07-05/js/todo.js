@@ -1,6 +1,6 @@
-const toDoForm = document.getElementById("todo-form");
+const toDoForm = document.getElementById("todo_form");
 const toDoList = document.getElementById("todo_list");
-const toDoInput = document.querySelector("#todo-form input");
+const toDoInput = document.querySelector("#todo_form input");
 
 const TODOS_KEY = 'todos'
 
@@ -18,9 +18,9 @@ function deleteToDo(event){
 function paintToDo(newTodoObj){
     const li = document.createElement("li");
     const span = document.createElement("span");
-    span.innerText = newTodoObj.text;
     const button = document.createElement("button");
     button.innerText = "❌";
+    span.innerText = newTodoObj.text;
     button.addEventListener("click", deleteToDo);
     li.appendChild(span);
     li.appendChild(button);
