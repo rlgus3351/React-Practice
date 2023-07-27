@@ -4,7 +4,6 @@ body{
     background-color: beige;
     background-size: 100%;
     color: #fff;
-    font-family: 'Poppins', sans-serif;
 }
 
 .hidden{
@@ -28,7 +27,6 @@ body{
 }
 
 #greeting{
-    margin-top: 50px;
     text-align: center;
     font-size: 4em;
 }
@@ -53,7 +51,6 @@ input[type="text"]{
     border-radius: 5px;
     font-size: 1.2em;
 }
-
 .todo_list{
-    
+
 }
