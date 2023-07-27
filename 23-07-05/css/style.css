@@ -11,7 +11,7 @@ body{
 }
 
 #clock{
-    font-size: 12em;
+    font-size: 10em;
     text-align: center;
     color:white;
 }
@@ -33,4 +33,25 @@ body{
 
 #todo_list li{
     text-decoration: none;
+}
+
+#login-form{
+    text-align: center  ;
+}
+#todo-form{
+    text-align: center;
+}
+
+input[type="text"]{
+    height:auto;
+    width: 300px;
+    padding: .8em .5em;
+    cursor: text;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+
+.todo_list{
+    
 }
