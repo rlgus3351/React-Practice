@@ -7,6 +7,29 @@
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=98c8661be0a413b412d7315735b24e96"></script>
 </head>
 <body>
+        <select id="station">
+            <option value="평동">평동</option>
+            <option value="도산">도산</option>
+            <option value="광주송정">광주송정</option>
+            <option value="송정공원">송정공원</option>
+            <option value="공항">공항</option>
+            <option value="김대중컨벤션센터">김대중컨벤션센터</option>
+            <option value="상무">상무</option>
+            <option value="운천">운천</option>
+            <option value="쌍촌">쌍촌</option>
+            <option value="화정">화정</option>
+            <option value="농성">농성</option>
+            <option value="돌고개">돌고개</option>
+            <option value="양동시장">양동시장</option>
+            <option value="금남로5가">금남로5가</option>
+            <option value="금남로4가">금남로4가</option>
+            <option value="문화전당">문화전당</option>
+            <option value="남광주">남광주</option>
+            <option value="학동">학동</option>
+            <option value="소태">소태</option>
+            <option value="녹동">녹동</option>
+        </select>
+        <button type="submit">검색</button>
     <table border="1" id="table">
         <thead>
             <td>약국 이름</td>
@@ -27,8 +50,16 @@
 	        center: new kakao.maps.LatLng(35.1394294, 126.7964119), //지도의 중심좌표.
 	        level: 3 //지도의 레벨(확대, 축소 정도)
         };
+        
         var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
-        $(document).ready(function(){
+        var select = document.getElementById("station");
+        select.addEventListener("selectionchange", valueHandle);
+
+        function valueHandle(event){
+            console.log(event);
+        }
+        $(document).ready(function(){   
+            
             let bplcNm = [];
             let rdnWhlAddr = [];
             let latitude = [];
@@ -43,7 +74,7 @@
                 serviceKey:"ZKiieHbBwQGTkPhH0wZRgTVdfaeRSRiBaykZfbj9U9gd3PhlZ/SYdi0o32aqiLK1k4fxqf/AqUMu4n3kghRqHQ==",
                 pageNo:1,
                 numOfRows:10,
-                STATION_NAME:"광주송정역"
+                STATION_NAME:"금남로5가"
             },
             
             success : function(result){
@@ -61,7 +92,7 @@
                 for (j = 0; j<len; j++){
                     var tr = "<tr>"+
                         "<td>"+bplcNm[j]+"</td>"+
-                        "<td>"+rdnWhlAddr[j]+"</td>"+
+                        "<td>"+rdnWhlAddr[j]+"</td>"+ 
                         "<td>"+latitude[j]+"</td>"+
                         "<td>"+longitude[j]+"</td>"+
                         +"</tr>";
@@ -104,3 +135,4 @@
     </script>
 </body>
 </html>
+
