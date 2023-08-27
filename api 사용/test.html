@@ -44,8 +44,10 @@
             
         </tbody>
     </table>
+    <div id="map" style="width:500px;height:400px;"></div>
     <script>
         var selectV;
+        
         function clearTable(){
             $("#table tbody tr").remove();
         }
@@ -58,11 +60,7 @@
             selectV = value;
         }
         function dataSend(){
-            let bplcNm = [];
-            let rdnWhlAddr = [];
-            let latitude = [];
-            let longitude = [];
-            var positions= [];
+            
             const tbody = $('#table tbody');
             $.ajax({
                 method:'get',
@@ -77,6 +75,12 @@
             
             success : function(result){
                 // 데이터 확인
+                var bplcNm = [];
+                var rdnWhlAddr = [];
+                var latitude = [];
+                var longitude = [];
+                var positions= [];
+                
                 console.log(result);
                 let xml = $(result).find("response");
                 let len = xml.find("item").length;
@@ -96,6 +100,15 @@
                         +"</tr>";
                     tbody.append(tr);
                     }
+                kakao.maps.load(() =>{
+                    const container = document.getElementById('map');
+                    const options = {
+                        center : new kakao.maps.Lating(35.1499852, 126.8572521),
+                        level:3
+                    };
+                    const map = new kakao.maps.Map(container, options);
+                });
+                
             },
                 error: function(error){
                     console.log("erro");
