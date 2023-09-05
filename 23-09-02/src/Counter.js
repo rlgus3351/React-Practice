@@ -5,15 +5,7 @@ class Counter extends Component{
         number:0,
         fixedNumber:0
     };
-    // constructor(props){
-    //     super(props);
-    //     // state의 초기값 설정
-    //     this.state = {
-    //         number:0,
-    //         fixedNumber:0
-            
-    //     };
-    // }
+
     render(){
         // state를 조회할 때는 this.state로 조회.
         const {number, fixedNumber} = this.state;
