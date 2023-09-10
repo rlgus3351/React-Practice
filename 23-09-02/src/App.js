@@ -1,6 +1,6 @@
-import Say from './Say'
-const App = () => {
-  return <Say />; 
-}
+import EventPractice from "./EventPractice";
 
+const App = () => {
+  return <EventPractice/>;
+};
 export default App;
